@@ -1,0 +1,479 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Variables */
+:root{
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* margins */
+.my-1{
+    margin: 1rem 0;
+}
+.my-2{
+    margin: 1.5rem 0;
+}
+.my-3{
+    margin: 2rem 0;
+}
+.my-4{
+    margin: 3rem 0;
+}
+.my-5{
+    margin: 4rem 0;
+}
+
+.m-1{
+    margin: 1rem;
+}
+.m-2{
+    margin: 1.5rem;
+}
+.m-3{
+    margin: 2rem;
+}
+.m-4{
+    margin: 3rem;
+}
+.m-5{
+    margin: 4rem;
+}
+
+/* padding */
+.py-1{
+    padding: 1rem 0;
+}
+.py-2{
+    padding: 1.5rem 0;
+}
+.py-3{
+    padding: 2rem 0;
+}
+.py-4{
+    padding: 3rem 0;
+}
+.py-5{
+    padding: 4rem 0;
+}
+
+.p-1{
+    padding: 1rem;
+}
+.p-2{
+    padding: 1.5rem;
+}
+.p-3{
+    padding: 2rem;
+}
+.p-4{
+    padding: 3rem;
+}
+.p-5{
+    padding: 4rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,h1{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* Navbar */
+.navbar{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+}
+
+/* Showcase */
+
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p{
+    margin: 20px 0;
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+}
+
+.card{
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+/* When you click on the input box */
+.showcase input:focus{
+    outline: none;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn:hover{
+    transform: scale(1.08);
+}
+
+.showcase::before,
+.showcase::after{
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    height: 100px;
+    transform: skewY(-3deg);
+    /* For other browsers */
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+
+}
+
+/* STATS */
+.stats{
+    padding-top: 100px;
+}
+
+.grid-3{
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.stats-heading{
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3{
+    font-size: 35px;
+}
+
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* CLI */
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* We have - col=3 and row=2  */
+/* So the first element present in the grid what we want is we want the first element to take space of both col  */
+/* so grid col = 1 to 2 and the 3rd will be left for others and they will automatically adjusted  */
+/* and that first element we want two take both rows so grid row from 1 to 2  */
+/* 2*3 = 6 grids are there 4 grids are taken by our first element from row 1 to row 2 and col 1 to col 2  
+and the other two are are placed in single grid  */
+.cli .grid > *:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.bg-primary{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+.btn-dark{
+    background-color: var(--dark-color);
+}
+
+/* Text sizes */
+.lead{
+    font-size: 20px;
+}
+.sm{
+    font-size: 1rem;
+}
+.md{
+    font-size: 2rem;
+}
+.lg{
+    font-size: 3rem;
+}
+.xl{
+    font-size: 4rem;
+}
+
+/* Languages */
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+
+    transition: transform 0.2s ease-in;
+}
+
+.languages .flex{
+    flex-wrap: wrap;
+}
+
+.languages .card .h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+/* Footer */
+.bg-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.footer .social a{
+    margin: 0 10px;
+}
+
+/* Media Queries */
+
+/* Tablet and under */
+@media(max-width: 768px){
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .platform .grid,
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: auto;
+    }
+
+    .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form{
+        justify-self: center;
+        align-self: center;
+        top: 30px;
+    }
+
+    .stats{
+        margin-top: 25px;
+    }
+
+    .cli .grid > *:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer > .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Mobile */
+@media(max-width: 500px){
+    
+    .navbar{
+        height: 110px;
+    }
+    
+    .navbar .flex{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .footer > .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+    }
+
+    .footer i{
+        margin: 5px 5px;
+    }
+    
+}
+
+/* Animations */
+@keyframes slideFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromBottom {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.showcase-text{
+    animation: slideFromLeft 1s ease-in;
+}
+
+.showcase-form{
+    animation: slideFromRight 1s ease-in;
+}
+.stats{
+    animation: slideFromBottom 1s ease-in;
+}
