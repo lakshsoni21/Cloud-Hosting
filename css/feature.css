@@ -89,4 +89,14 @@
     .features-cards .grid{
         display: block;
     }
+    .features-cards .card{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width:425px) and (max-width: 768px){
+    .features-cards .grid{
+        grid-template-rows: minmax(130px, auto);
+    }
 }
