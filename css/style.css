@@ -432,6 +432,44 @@ and the other two are are placed in single grid  */
     
 }
 
+/* For Mobiles from L to M sizes */
+@media(max-width: 430px){
+    html,body{
+        overflow-x: hidden;
+    }
+    .showcase-text{
+        padding: 0px 55px;
+    }
+    .showcase h1{
+        font-size: 35px;
+    }
+    .showcase-form{
+        padding: 25px 55px;
+    }
+    .stats .container{
+        padding: 0px;
+    }
+    .cli .card{
+        height: 90px;
+    }
+
+    .cloud .grid{
+        gap: 30px;
+    }
+
+    .lg{
+        font-size: 2rem;
+    }
+    .md{
+        font-size: 1.8rem;
+    }
+
+    .languages .flex{
+        justify-content: center;
+    }
+
+}
+
 /* Animations */
 @keyframes slideFromLeft {
     0%{
